@@ -9,7 +9,8 @@ public class bluePrints : MonoBehaviour
     {
         Walkman,
         Ladder,
-        Cart
+        Cart,
+        Tesseract
     }
 
     public List<bluePrintsEnum> ownedBluePrints;
