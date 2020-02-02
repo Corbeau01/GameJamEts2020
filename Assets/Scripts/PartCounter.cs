@@ -27,6 +27,10 @@ public class PartCounter : MonoBehaviour
         {
             this.maxPart = 3;
         }
+        if (myId == 3)
+        {
+            this.maxPart = 2;
+        }
 
     }
 
@@ -47,6 +51,7 @@ public class PartCounter : MonoBehaviour
             for (int i = 1; i < this.transform.childCount; i++)//ANAKIN
             {
                 Destroy(this.transform.GetChild(i).gameObject);
+                print("LightSaberNoise");
             }
         }
        
