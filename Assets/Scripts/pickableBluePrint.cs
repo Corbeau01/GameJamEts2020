@@ -29,7 +29,7 @@ public class pickableBluePrint : MonoBehaviour
     {
         GameObject collidedObject = collision.collider.gameObject;
 
-        print("IHAVeJUStCollide");
+
 
         if (collidedObject.tag == "Player")
         {
