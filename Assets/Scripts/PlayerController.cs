@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGoingLeft;
 
+    public Animator playerAnim; 
+
+    
+
     public ChangeSpriteDirection SpriteDirectionController;
 
     // Start is called before the first frame update
@@ -42,6 +46,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(Input.GetKey(KeyCode.F1))
         {
             rb.velocity= new Vector3(0.0f,0.0f, 0.0f);
@@ -75,6 +80,7 @@ public class PlayerController : MonoBehaviour
             CurrentAngle = InitialAngle;
             if (Input.GetKeyDown("q"))
             {
+               
                 Rotating_q = true;
                 FinishAngle = InitialAngle + 90;
                 if (FinishAngle >= 360)
@@ -84,6 +90,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (Input.GetKeyDown("e"))
             {
+               
                 Rotating_e = true;
                 FinishAngle = InitialAngle - 90;
                 if (FinishAngle < 0)
@@ -91,8 +98,9 @@ public class PlayerController : MonoBehaviour
                     FinishAngle += 360;
                 }
             }
+            
         }
-
+       
         if (Rotating_q)
         {
             transform.Rotate(0, RotationSpeed * Time.deltaTime, 0);
@@ -117,16 +125,20 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        playerAnim.SetBool("Walk", false);
         if (!(Input.GetKeyDown("d") && Input.GetKeyDown("a")))
         {
             if (Input.GetKey("d"))
             {
+                playerAnim.SetBool("Walk", true);
                 SpriteDirectionController.GoingRight();
                 transform.Translate(Vector3.right * MovementSpeed * Time.deltaTime);
                 rb.AddForce(Vector3.right * thrust);
+
             }
             else if (Input.GetKey("a"))
             {
+                playerAnim.SetBool("Walk", true);
                 SpriteDirectionController.GoingLeft();
                 transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
                 rb.AddForce(Vector3.left * thrust);
@@ -134,12 +146,15 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+           
             rb.velocity = new Vector3(0.0f, rb.velocity.y, 0.0f);
         }
+        playerAnim.SetBool("jump", false);
         if (Input.GetKeyDown("space"))
         {
             if (CanJump)
             {
+                playerAnim.SetBool("jump", true);
                 rb.AddForce(Vector3.up * JumpThrust);
                 CanJump = false;
             }
