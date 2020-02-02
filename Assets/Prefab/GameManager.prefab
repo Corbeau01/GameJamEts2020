@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6559146714263381909}
   - component: {fileID: 1026471928996653279}
   - component: {fileID: 578789970}
+  - component: {fileID: 537695373271631190}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6559146714263381899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.959867, y: -7.827705, z: -43.511517}
+  m_LocalPosition: {x: 0, y: 6.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,3 +59,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockedFeatures: 
+--- !u!114 &537695373271631190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6559146714263381899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4f2680a24750547a678c8477d01508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  schematicView: {fileID: 0}
+  bp: {fileID: 1026471928996653279}
+  textCount: 0
+  activeBp: 0
+  ladder: {fileID: 0}
+  Walkman: {fileID: 0}
+  cart: {fileID: 0}
+  button: {fileID: 0}
+  textBox: {fileID: 0}
+  tesseract: {fileID: 0}

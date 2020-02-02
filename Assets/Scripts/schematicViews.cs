@@ -20,7 +20,8 @@ public class schematicViews : MonoBehaviour
     public GameObject cart;
     public GameObject button;
     public GameObject textBox;
-    public GameObject tesseract; 
+    public GameObject tesseract;
+    public GameObject Pyramidon; 
 
     private int bpEnumCount = bluePrints.bluePrintsEnum.GetNames(typeof(bluePrints.bluePrintsEnum)).Length;
 
@@ -109,6 +110,12 @@ public class schematicViews : MonoBehaviour
                     Walkman.SetActive(false);
                     tesseract.SetActive(true);
                     break;
+                case bluePrints.bluePrintsEnum.Pyramidon:
+                    cart.SetActive(false);
+                    ladder.SetActive(false);
+                    Walkman.SetActive(false);
+                    tesseract.SetActive(false);
+                    break;
             }
         }
     }
@@ -147,6 +154,13 @@ public class schematicViews : MonoBehaviour
                         }
                         break;
                     case bluePrints.bluePrintsEnum.Tesseract:
+                        activeBp = bluePrints.bluePrintsEnum.Pyramidon;
+                        if (bp.checkIfBluePrintOwned(activeBp))
+                        {
+                            exit = 1;
+                        }
+                        break;
+                        case bluePrints.bluePrintsEnum.Pyramidon:
                         activeBp = bluePrints.bluePrintsEnum.Cart;
                         if (bp.checkIfBluePrintOwned(activeBp))
                         {
@@ -173,7 +187,7 @@ public class schematicViews : MonoBehaviour
                 switch (activeBp)
                 {
                     case bluePrints.bluePrintsEnum.Cart:
-                        activeBp = bluePrints.bluePrintsEnum.Tesseract;
+                        activeBp = bluePrints.bluePrintsEnum.Pyramidon;
                         if (bp.checkIfBluePrintOwned(activeBp))
                         {
                             exit = 1;
@@ -195,6 +209,13 @@ public class schematicViews : MonoBehaviour
                         break;
                     case bluePrints.bluePrintsEnum.Tesseract:
                         activeBp = bluePrints.bluePrintsEnum.Walkman;
+                        if (bp.checkIfBluePrintOwned(activeBp))
+                        {
+                            exit = 1;
+                        }
+                        break;
+                        case bluePrints.bluePrintsEnum.Pyramidon:
+                        activeBp = bluePrints.bluePrintsEnum.Tesseract;
                         if (bp.checkIfBluePrintOwned(activeBp))
                         {
                             exit = 1;
