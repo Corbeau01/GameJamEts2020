@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5925733831676714384
+--- !u!1 &1264150343111507764
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,53 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5925733831676714396}
-  - component: {fileID: 5925733831676714399}
-  - component: {fileID: 5925733831676714394}
-  - component: {fileID: 5925733831676714395}
-  - component: {fileID: 6827038601949414667}
+  - component: {fileID: 1264150343111507768}
+  - component: {fileID: 1264150343111507771}
+  - component: {fileID: 1264150343111507774}
+  - component: {fileID: 1264150343111507775}
+  - component: {fileID: 2092422183779346351}
   m_Layer: 0
-  m_Name: Grabable object 1
+  m_Name: TesseractPart3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5925733831676714396
+--- !u!4 &1264150343111507768
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925733831676714384}
+  m_GameObject: {fileID: 1264150343111507764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.92, y: 3.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6528366331432352019}
+  - {fileID: 1814439492315421623}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5925733831676714399
+--- !u!65 &1264150343111507771
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925733831676714384}
+  m_GameObject: {fileID: 1264150343111507764}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5925733831676714394
+  m_Size: {x: 2.8234472, y: 2.7701473, z: 1}
+  m_Center: {x: -0.01606369, y: -0.13556957, z: 0}
+--- !u!54 &1264150343111507774
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925733831676714384}
+  m_GameObject: {fileID: 1264150343111507764}
   serializedVersion: 2
   m_Mass: 0.0000001
   m_Drag: 0
@@ -64,26 +64,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &5925733831676714395
+--- !u!114 &1264150343111507775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925733831676714384}
+  m_GameObject: {fileID: 1264150343111507764}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4203cb1057ce4894cade8bbb88c07d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isBook: 0
---- !u!114 &6827038601949414667
+--- !u!114 &2092422183779346351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925733831676714384}
+  m_GameObject: {fileID: 1264150343111507764}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94acf1918c03c3a45845038cfdef78e6, type: 3}
@@ -91,12 +91,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DropPoint: {fileID: 0}
   schematicView: {fileID: 0}
---- !u!1001 &2297924706394477065
+--- !u!1001 &6653113885920276653
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 5925733831676714396}
+    m_TransformParent: {fileID: 1264150343111507768}
     m_Modifications:
     - target: {fileID: -4216859302048453862, guid: 99d07a4f09def0a41869f61601735375,
         type: 3}
@@ -160,9 +160,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99d07a4f09def0a41869f61601735375, type: 3}
---- !u!4 &6528366331432352019 stripped
+--- !u!4 &1814439492315421623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 99d07a4f09def0a41869f61601735375,
     type: 3}
-  m_PrefabInstance: {fileID: 2297924706394477065}
+  m_PrefabInstance: {fileID: 6653113885920276653}
   m_PrefabAsset: {fileID: 0}
