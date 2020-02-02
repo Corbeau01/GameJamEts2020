@@ -42,6 +42,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKey(KeyCode.F1))
+        {
+            rb.velocity= new Vector3(0.0f,0.0f, 0.0f);
+        }
         if (Mathf.Abs(rb.velocity.x) < 2)
         {
             rb.velocity = new Vector3(0.0f, rb.velocity.y, rb.velocity.z);
@@ -147,7 +151,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             
-            if(FindObjectOfType<features>().unlockedFeatures.Contains(features.unlockableFeatures.Gravity))
+            if(FindObjectOfType<features>().unlockedFeatures.Contains(features.unlockableFeatures.Gravity)==false)
             {
                 return;
             }

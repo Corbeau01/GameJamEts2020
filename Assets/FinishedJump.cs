@@ -22,6 +22,11 @@ public class FinishedJump : MonoBehaviour
             print("Touched");
             this.transform.parent.GetComponent<PlayerController>().CanJump = true;
         }
+        if (other.gameObject.tag == "Cart")
+        {
+            print("Touched");
+            other.GetComponent<RollMaMan>().PlayerIsIn = true;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {

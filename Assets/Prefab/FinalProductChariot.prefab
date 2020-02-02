@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2320240924701976360}
   - component: {fileID: 2320240924701976365}
   - component: {fileID: 2320240924701976364}
+  - component: {fileID: -4876842217657089994}
   m_Layer: 0
   m_Name: FinalProductChariot
   m_TagString: Untagged
@@ -76,6 +77,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBook: 0
+--- !u!114 &-4876842217657089994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320240924701976359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38aa931071490b3439edf4017cd7a4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DropPoint: {fileID: 0}
+  VroomTarget: {fileID: 0}
+  PlayerIsIn: 0
 --- !u!1001 &2351055443908211296
 PrefabInstance:
   m_ObjectHideFlags: 0
