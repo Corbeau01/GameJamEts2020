@@ -42,6 +42,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(this.transform.position.y<=-100)
+        {
+            SceneManager.LoadScene(sceneBuildIndex:+0);
+        }
         if(Input.GetKey(KeyCode.F1))
         {
             rb.velocity= new Vector3(0.0f,0.0f, 0.0f);
