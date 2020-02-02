@@ -24,7 +24,7 @@ public class FinishedJump : MonoBehaviour
         }
         if (other.gameObject.tag == "Cart")
         {
-            print("Touched");
+            print("Playerisin");
             other.GetComponent<RollMaMan>().PlayerIsIn = true;
         }
     }
