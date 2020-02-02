@@ -6,6 +6,6 @@ public class LoadNextSceness : MonoBehaviour
 {
     public void LoadMyNextScene()
     {
-        SceneManager.LoadScene(sceneBuildIndex:+1);
+        SceneManager.LoadScene(sceneBuildIndex:2);
     }
 }
