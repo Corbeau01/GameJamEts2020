@@ -1830,6 +1830,30 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 376681733, guid: a44e29ae39c590743ae621bfc2d05022, type: 3}
+      propertyPath: m_Size.y
+      value: 0.41278243
+      objectReference: {fileID: 0}
+    - target: {fileID: 376681733, guid: a44e29ae39c590743ae621bfc2d05022, type: 3}
+      propertyPath: m_Size.z
+      value: 1.8356661
+      objectReference: {fileID: 0}
+    - target: {fileID: 376681733, guid: a44e29ae39c590743ae621bfc2d05022, type: 3}
+      propertyPath: m_Center.x
+      value: 0.1877054
+      objectReference: {fileID: 0}
+    - target: {fileID: 376681733, guid: a44e29ae39c590743ae621bfc2d05022, type: 3}
+      propertyPath: m_Center.z
+      value: 0.034148037
+      objectReference: {fileID: 0}
+    - target: {fileID: 376681733, guid: a44e29ae39c590743ae621bfc2d05022, type: 3}
+      propertyPath: m_Center.y
+      value: -1.3673774
+      objectReference: {fileID: 0}
+    - target: {fileID: 376681733, guid: a44e29ae39c590743ae621bfc2d05022, type: 3}
+      propertyPath: m_Size.x
+      value: 0.94498324
+      objectReference: {fileID: 0}
     - target: {fileID: 1376278478, guid: a44e29ae39c590743ae621bfc2d05022, type: 3}
       propertyPath: m_RootOrder
       value: 0
