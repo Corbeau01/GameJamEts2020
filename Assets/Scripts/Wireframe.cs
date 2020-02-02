@@ -46,6 +46,12 @@ public class Wireframe : MonoBehaviour
     
     void Update()
     {
+        if(Fixed)
+        {
+            activated = false;
+            Noise.SetActive(false);
+            return;
+        }
         if(activated)
         {
             time += Time.deltaTime;
