@@ -10,7 +10,8 @@ public class bluePrints : MonoBehaviour
         Walkman,
         Ladder,
         Cart,
-        Tesseract
+        Tesseract,
+        Pyramidon
     }
 
     public List<bluePrintsEnum> ownedBluePrints;
