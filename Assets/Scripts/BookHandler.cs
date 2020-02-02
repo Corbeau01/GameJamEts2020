@@ -16,7 +16,7 @@ public class BookHandler : MonoBehaviour
         foreach(var obj in regularBooks)
         {
             obj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            obj.GetComponent<Rigidbody>().AddForce(Random.Range(-6, 6), Random.Range(-6, 6), Random.Range(-6, 6), ForceMode.Impulse);
+            obj.GetComponent<Rigidbody>().AddForce(Random.Range(-16, 16), Random.Range(-16, 16), Random.Range(-16, 16), ForceMode.Impulse);
             obj.gameObject.layer = 11;
         }
     }
