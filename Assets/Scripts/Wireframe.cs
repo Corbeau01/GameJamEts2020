@@ -9,6 +9,7 @@ public class Wireframe : MonoBehaviour
     public float MaxTime;
 
     public bool Fixed;
+    public GameObject Noise;
     
     //void Start() { //juste pour tester la fonction
     //    enable();
@@ -29,12 +30,12 @@ public class Wireframe : MonoBehaviour
     
     void OnPreRender()
     {
-        GL.wireframe = activated;
+        //GL.wireframe = activated;
     }
 
     void OnPostRender()
     {
-        GL.wireframe = false;
+        ///GL.wireframe = false;
     }
     void Start()
     {
@@ -48,20 +49,20 @@ public class Wireframe : MonoBehaviour
         if(activated)
         {
             time += Time.deltaTime;
-            if (time > Random.Range(3, 7))
+            if (time > Random.Range(3, 5))
             {
                 activated = false;
-
+                Noise.SetActive(false);
                 time = 0;
             }
         }
         if (!Fixed)
         {
             time += Time.deltaTime;
-            if (time > Random.Range(3,15))
+            if (time > Random.Range(4,10))
             {
                 activated = !activated;
-
+                Noise.SetActive(true);
                 time = 0;
             }
         }

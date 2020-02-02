@@ -12,5 +12,15 @@ public class ActivateViews : MonoBehaviour
             SchematicView.SetActive(!SchematicView.activeSelf);
 
         }
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            schematicViews SV = FindObjectOfType<schematicViews>();
+            SV.nextSchematic();
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            schematicViews SV = FindObjectOfType<schematicViews>();
+            SV.previousSchematic();
+        }
     }
 }

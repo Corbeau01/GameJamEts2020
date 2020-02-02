@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float JumpThrust = 10.0f;
     public Rigidbody rb;
 
+    public bool CanClimb = false;
     public bool RotateAxisUnlocked;
     private bool Rotating_q = false;
     private bool Rotating_e = false;
@@ -138,6 +139,39 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(Vector3.up * JumpThrust);
                 CanJump = false;
             }
+        }
+        if(CanClimb)
+        {
+            this.GetComponent<Rigidbody>().useGravity = false;        
+        }
+        else
+        {
+            
+            if(FindObjectOfType<features>().unlockedFeatures.Contains(features.unlockableFeatures.Gravity))
+            {
+                return;
+            }
+            this.GetComponent<Rigidbody>().useGravity = true;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            if (CanClimb)
+            {
+                transform.Translate(Vector3.up * MovementSpeed * Time.deltaTime);
+                
+
+            }
+
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            if (CanClimb)
+            {
+                transform.Translate(Vector3.down * MovementSpeed * Time.deltaTime);
+
+
+            }
+
         }
     }
 }
