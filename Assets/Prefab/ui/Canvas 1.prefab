@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9f1b7e24bb98f4daee1f98652c5877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FinalProductPrefab: {fileID: 7756247086788030693, guid: 5e1a9cfa8b1aae9468f1ac0b083b48c3,
+  FinalProductPrefab: {fileID: 8352844454073855516, guid: aff7a5c8555272b48b4d9b384d767cff,
     type: 3}
   myId: 2
   myparts: 0
