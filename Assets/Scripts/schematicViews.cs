@@ -71,8 +71,10 @@ public class schematicViews : MonoBehaviour
 
         int exit = 0;
 
-        while (exit == 0)
-            if (bp.getBpCount() > 0)
+        if (bp.getBpCount() > 0)
+        {
+            while (exit == 0)
+
             {
                 switch (activeBp)
                 {
@@ -102,15 +104,17 @@ public class schematicViews : MonoBehaviour
                         break;
                 }
             }
+        }
     }
 
     public void previousSchematic()
-
     {
         int exit = 0;
 
-        while (exit == 0)
-            if (bp.getBpCount() > 0)
+        if (bp.getBpCount() > 0)
+        {
+            while (exit == 0)
+
             {
                 switch (activeBp)
                 {
@@ -140,7 +144,6 @@ public class schematicViews : MonoBehaviour
                         break;
                 }
             }
+        }
     }
-
-
 }
