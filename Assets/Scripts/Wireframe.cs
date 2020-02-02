@@ -42,24 +42,27 @@ public class Wireframe : MonoBehaviour
         Fixed = false;
         randomTime = Random.value * MaxTime;
     }
-
+    
     void Update()
     {
+        if(activated)
+        {
+            time += Time.deltaTime;
+            if (time > Random.Range(3, 7))
+            {
+                activated = false;
+
+                time = 0;
+            }
+        }
         if (!Fixed)
         {
             time += Time.deltaTime;
-            if (time > randomTime)
+            if (time > Random.Range(3,15))
             {
-                if (activated)
-                {
-                    activated = false;
-                }
-                else
-                {
-                    activated = true;
-                }
+                activated = !activated;
+
                 time = 0;
-                randomTime = Random.value * MaxTime;
             }
         }
         else

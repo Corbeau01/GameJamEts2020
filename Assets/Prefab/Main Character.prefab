@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8477802106954548302}
   - component: {fileID: 8477802106954548272}
   - component: {fileID: 8477802106954548274}
-  - component: {fileID: 8477802106954548301}
   - component: {fileID: 8477802106954548273}
   m_Layer: 0
   m_Name: Main Character
@@ -115,25 +114,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8477802106954548301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8477802106954548300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 358261fb1cbfe904ca0425477e6e6896, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovementSpeed: 2
-  RotationSpeed: 75
-  thrust: 1
-  JumpThrust: 10
-  rb: {fileID: 0}
-  RotateAxisUnlocked: 1
-  twoPointFivey: 0
 --- !u!114 &8477802106954548273
 MonoBehaviour:
   m_ObjectHideFlags: 0

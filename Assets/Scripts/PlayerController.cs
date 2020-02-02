@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private int FinishAngle;
     private float Timer = 0;
     private features Feats;
-
+    public GameObject MyFeet;
     public bool CanJump;
 
     public bool IsGoingLeft;
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         CanJump = false;
         RotateAxisUnlocked = false;
     }
-
+   
     // Update is called once per frame
     void Update()
     {
@@ -136,6 +136,7 @@ public class PlayerController : MonoBehaviour
             if (CanJump)
             {
                 rb.AddForce(Vector3.up * JumpThrust);
+                CanJump = false;
             }
         }
     }

@@ -58,20 +58,20 @@ public class schematicViews : MonoBehaviour
     void Update()
     {
 
-        if (textBox.activeSelf)
-        {
-            textCount -= Time.deltaTime;
-            if (textCount <= 0)
-            {
-                textBox.SetActive(false);
-            }
-        }
+        //if (textBox.activeSelf)
+        //{
+        //    textCount -= Time.deltaTime;
+        //    if (textCount <= 0)
+        //    {
+        //        textBox.SetActive(false);
+        //    }
+        //}
 
-        if (bp.getBpCount() > prevBpCount)
-        {
-            showTextBox();
-            prevBpCount = bp.getBpCount();
-        }
+        //if (bp.getBpCount() > prevBpCount)
+        //{
+        //    showTextBox();
+        //    prevBpCount = bp.getBpCount();
+        //}
 
         if(bp.getBpCount()>0)
         {
@@ -91,30 +91,35 @@ public class schematicViews : MonoBehaviour
                     ladder.SetActive(false);
                     Walkman.SetActive(false);
                     tesseract.SetActive(false);
+                    Pyramidon.SetActive(false);
                     break;
                 case bluePrints.bluePrintsEnum.Ladder:
                     cart.SetActive(false);
                     ladder.SetActive(true);
                     Walkman.SetActive(false);
                     tesseract.SetActive(false);
+                    Pyramidon.SetActive(false);
                     break;
                 case bluePrints.bluePrintsEnum.Walkman:
                     cart.SetActive(false);
                     ladder.SetActive(false);
                     Walkman.SetActive(true);
-                    tesseract.SetActive(false); 
+                    tesseract.SetActive(false);
+                    Pyramidon.SetActive(false);
                     break;
                 case bluePrints.bluePrintsEnum.Tesseract:
                     cart.SetActive(false);
                     ladder.SetActive(false);
                     Walkman.SetActive(false);
                     tesseract.SetActive(true);
+                    Pyramidon.SetActive(false);
                     break;
                 case bluePrints.bluePrintsEnum.Pyramidon:
                     cart.SetActive(false);
                     ladder.SetActive(false);
                     Walkman.SetActive(false);
                     tesseract.SetActive(false);
+                    Pyramidon.SetActive(true);
                     break;
             }
         }
@@ -122,7 +127,7 @@ public class schematicViews : MonoBehaviour
 
     public void nextSchematic()
     {
-
+        print("wasaaaaaaaaaaa");
         int exit = 0;
 
         if (bp.getBpCount() > 0)
@@ -230,11 +235,11 @@ public class schematicViews : MonoBehaviour
     }
 
 
-    public void showTextBox()
-    {
-        textBox.SetActive(true);
-        textCount = 3.5f;
-    }
+    //public void showTextBox()
+    //{
+    //    textBox.SetActive(true);
+    //    textCount = 3.5f;
+    //}
 
 
 

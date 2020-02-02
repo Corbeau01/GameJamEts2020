@@ -53,6 +53,7 @@ public class PartCounter : MonoBehaviour
             if(myId==3)//piramidon
             {
                 Camera.main.GetComponent<Wireframe>().Fixed = true;
+                GameObject.Destroy(GameObject.Find("backGround1"));
             }
             Instantiate(FinalProductPrefab, this.transform.position, Quaternion.identity);
             ISConstructefd = true;

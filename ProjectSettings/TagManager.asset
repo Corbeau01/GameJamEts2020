@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GravityArtefact
   - WireframeArtefact
+  - Ground
   layers:
   - Default
   - TransparentFX

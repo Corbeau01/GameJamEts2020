@@ -13,7 +13,7 @@ public class bluePrints : MonoBehaviour
         Tesseract,
         Pyramidon
     }
-
+    [SerializeField]
     public List<bluePrintsEnum> ownedBluePrints;
 
     public void Awake()

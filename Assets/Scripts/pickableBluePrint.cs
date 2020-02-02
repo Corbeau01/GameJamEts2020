@@ -29,14 +29,14 @@ public class pickableBluePrint : MonoBehaviour
     {
         GameObject collidedObject = collision.collider.gameObject;
 
-
+        print("T0");
 
         if (collidedObject.tag == "Player")
         {
+            print("T1");
             
-            Destroy(this.gameObject);
             bp.addBluePrint(thisBluePrint);
-
+            print(thisBluePrint+"Is Activated");
             if (bp == null)
             {
                 bp = FindObjectOfType<bluePrints>();
@@ -44,6 +44,7 @@ public class pickableBluePrint : MonoBehaviour
             }
             //AudioManager.Instance.ItemPickup.Play(transform.position);
             Instantiate(pickupAnim, this.transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
         }
     }
    

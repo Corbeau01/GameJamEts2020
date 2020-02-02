@@ -10,6 +10,7 @@ public class ActivateViews : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.I))
         {
             SchematicView.SetActive(!SchematicView.activeSelf);
+
         }
     }
 }
