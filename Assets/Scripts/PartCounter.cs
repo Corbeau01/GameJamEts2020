@@ -12,7 +12,7 @@ public class PartCounter : MonoBehaviour
     public bluePrints bp;
     int maxPart=0;
     bool ISConstructefd = false;
-
+    
     void Start()
     {
        if(myId==0)
@@ -27,7 +27,7 @@ public class PartCounter : MonoBehaviour
         {
             this.maxPart = 3;
         }
-        if (myId == 3)
+        if (myId == 3)//piramidon
         {
             this.maxPart = 2;
         }
@@ -50,6 +50,10 @@ public class PartCounter : MonoBehaviour
     {
         if(ISConstructefd==false)
         {
+            if(myId==3)//piramidon
+            {
+                Camera.main.GetComponent<Wireframe>().Fixed = true;
+            }
             Instantiate(FinalProductPrefab, this.transform.position, Quaternion.identity);
             ISConstructefd = true;
             for (int i = 1; i < this.transform.childCount; i++)//ANAKIN

@@ -1,0 +1,29 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ChangeSpriteDirection : MonoBehaviour
+{
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void GoingLeft()
+    {
+        GetComponent<SpriteRenderer>().flipX = true;
+    }
+
+    public void GoingRight()
+    {
+        GetComponent<SpriteRenderer>().flipX = false;
+    }
+}

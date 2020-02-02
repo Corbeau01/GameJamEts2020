@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class Wireframe : MonoBehaviour
 {
-    bool enabled = true;
+    public bool activated;
+    private float time;
+    private float randomTime;
+
+    public float MaxTime;
+
+    public bool Fixed;
     
     //void Start() { //juste pour tester la fonction
     //    enable();
@@ -11,22 +17,54 @@ public class Wireframe : MonoBehaviour
     
     public void enable()
     {
-        enabled = true;
+        Fixed = true;
+        activated = false;
     }
     
     public void disable()
     {
-        enabled = false;
+        Fixed = false;
     }
     
     
     void OnPreRender()
     {
-        GL.wireframe = enabled;
+        GL.wireframe = activated;
     }
 
     void OnPostRender()
     {
         GL.wireframe = false;
+    }
+    void Start()
+    {
+        activated = false;
+        Fixed = false;
+        randomTime = Random.value * MaxTime;
+    }
+
+    void Update()
+    {
+        if (!Fixed)
+        {
+            time += Time.deltaTime;
+            if (time > randomTime)
+            {
+                if (activated)
+                {
+                    activated = false;
+                }
+                else
+                {
+                    activated = true;
+                }
+                time = 0;
+                randomTime = Random.value * MaxTime;
+            }
+        }
+        else
+        {
+            activated = false;
+        }  
     }
 } 
