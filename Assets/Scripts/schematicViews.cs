@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class schematicViews : MonoBehaviour
 {
@@ -8,12 +9,17 @@ public class schematicViews : MonoBehaviour
     bool displaySchematics;
     public GameObject schematicView;
     public bluePrints bp;
+    private int prevBpCount;
+    public float textCount;
+
 
     public bluePrints.bluePrintsEnum activeBp;
 
     public GameObject ladder;
     public GameObject Walkman;
     public GameObject cart;
+    public GameObject button;
+    public GameObject textBox; 
 
     private int bpEnumCount = bluePrints.bluePrintsEnum.GetNames(typeof(bluePrints.bluePrintsEnum)).Length;
 
@@ -22,6 +28,7 @@ public class schematicViews : MonoBehaviour
     {
         bp = FindObjectOfType<bluePrints>();
         displaySchematics = false;
+        button.SetActive(false); 
         schematicView.SetActive(false);
     }
 
@@ -35,12 +42,42 @@ public class schematicViews : MonoBehaviour
 
     }
 
+    public void toggleView()
+    {
+        if (bp.getBpCount() > 0)
+        {
+            schematicView.SetActive(!schematicView.activeSelf);
+        }
+    }
+
+
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("g") && bp.getBpCount() > 0)
+
+        if (textBox.activeSelf)
         {
-            schematicView.SetActive(!schematicView.activeSelf);
+            textCount -= Time.deltaTime;
+            if (textCount <= 0)
+            {
+                textBox.SetActive(false);
+            }
+        }
+
+        if (bp.getBpCount() > prevBpCount)
+        {
+            showTextBox();
+            prevBpCount = bp.getBpCount();
+        }
+
+        if(bp.getBpCount()>0)
+        {
+            button.SetActive(true); 
+        }
+        else
+        {
+            button.SetActive(false);
         }
 
         if (schematicView.activeSelf)
@@ -93,6 +130,13 @@ public class schematicViews : MonoBehaviour
                         }
                         break;
                     case bluePrints.bluePrintsEnum.Walkman:
+                        activeBp = bluePrints.bluePrintsEnum.Tesseract;
+                        if (bp.checkIfBluePrintOwned(activeBp))
+                        {
+                            exit = 1;
+                        }
+                        break;
+                    case bluePrints.bluePrintsEnum.Tesseract:
                         activeBp = bluePrints.bluePrintsEnum.Cart;
                         if (bp.checkIfBluePrintOwned(activeBp))
                         {
@@ -119,7 +163,7 @@ public class schematicViews : MonoBehaviour
                 switch (activeBp)
                 {
                     case bluePrints.bluePrintsEnum.Cart:
-                        activeBp = bluePrints.bluePrintsEnum.Walkman;
+                        activeBp = bluePrints.bluePrintsEnum.Tesseract;
                         if (bp.checkIfBluePrintOwned(activeBp))
                         {
                             exit = 1;
@@ -139,6 +183,13 @@ public class schematicViews : MonoBehaviour
                             exit = 1;
                         }
                         break;
+                    case bluePrints.bluePrintsEnum.Tesseract:
+                        activeBp = bluePrints.bluePrintsEnum.Walkman;
+                        if (bp.checkIfBluePrintOwned(activeBp))
+                        {
+                            exit = 1;
+                        }
+                        break;
                     default:
                         exit = 1;
                         break;
@@ -146,4 +197,14 @@ public class schematicViews : MonoBehaviour
             }
         }
     }
+
+
+    public void showTextBox()
+    {
+        textBox.SetActive(true);
+        textCount = 3.5f;
+    }
+
+
+
 }
