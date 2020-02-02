@@ -19,7 +19,8 @@ public class schematicViews : MonoBehaviour
     public GameObject Walkman;
     public GameObject cart;
     public GameObject button;
-    public GameObject textBox; 
+    public GameObject textBox;
+    public GameObject tesseract; 
 
     private int bpEnumCount = bluePrints.bluePrintsEnum.GetNames(typeof(bluePrints.bluePrintsEnum)).Length;
 
@@ -88,16 +89,25 @@ public class schematicViews : MonoBehaviour
                     cart.SetActive(true);
                     ladder.SetActive(false);
                     Walkman.SetActive(false);
+                    tesseract.SetActive(false);
                     break;
                 case bluePrints.bluePrintsEnum.Ladder:
                     cart.SetActive(false);
                     ladder.SetActive(true);
                     Walkman.SetActive(false);
+                    tesseract.SetActive(false);
                     break;
                 case bluePrints.bluePrintsEnum.Walkman:
                     cart.SetActive(false);
                     ladder.SetActive(false);
                     Walkman.SetActive(true);
+                    tesseract.SetActive(false); 
+                    break;
+                case bluePrints.bluePrintsEnum.Tesseract:
+                    cart.SetActive(false);
+                    ladder.SetActive(false);
+                    Walkman.SetActive(false);
+                    tesseract.SetActive(true);
                     break;
             }
         }
