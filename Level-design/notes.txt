@@ -1,0 +1,117 @@
+MC = main character
+
+Menu (broken):
+	Menu items are:
+		opTionS
+			change font size?
+			any other game options
+		moAr
+			drop-down that reveals "creds" and "a boot"
+		cReds
+			credits
+		a booT
+			summons a boot that kicks away all the letters except for the capitalized ones (not actually capitalized in the game, this is just a representation for these notes)
+	
+	Need to drag and drop an S T A R and T to spell out START, to click that and start the game
+	
+	
+Level 1: purely 2D
+	At this point, essentially everything is broken:
+		bad sound
+		bad lighting/vision
+			wireframe view, no colour
+		can't jump
+		no gravity for MC / bosses / objects
+		
+	Repaired this level:
+		sound
+		lighting/vision
+		jumping
+		gravity for MC
+		2.5D axis
+		
+	area to right is blocked off by boss door, so can only go left
+	
+	go left, repair wireframe view
+		get this automatically? Might be hard to figure out what to do, when seeing everything as wireframes
+	
+	"stairwell" section - map drops down a level, and there's also an overhanging upper level to jump to (except MC can't jump right now!)
+		gravity is broken, so MC maintains same height and keeps walking left in mid-air
+			repair gravity - MC falls into pit below
+			
+		there's a broken ladder/ramp down there - need to assemble the pieces and make ramp to go up and left
+		
+		walk up ramp:
+			repair jumping
+				boot schematic?
+			
+		can't go further left (there's a wall) - go back right, climb up stairwell on right
+			NOTE: put a sign on the left wall that says "Sorry, there's no secrets here! For real. We promise. Go defeat the boss! (The ramp might help you!)"
+				it can't be seen in the current 2D view, players can only read it if they come all the way back here after unlocking 2.5D and they rotate planes
+		
+		repair sound
+			3D walkman schematic
+		
+		jump back up the stairwell to starting height, then jump up and left onto the overhanging upper level
+	
+	some classic platforming/jumping
+		level collapsing, and need to repair it?
+		can also just pull up the ramp from below, it has to be the exact right length/elevation so we can use it for the cart later
+		at the end of this, jump down big ledge (no apparent way back up)
+	
+	repair first axis and unlock 2.5D mode
+	
+	have colour artefact hidden behind fake wall up here, visible from where 2.5D mode was unlocked?
+		walked right past it in 2D mode because it looked like part of the background
+		
+	also have cart components and schematic hidden behind another fake wall
+		assemble cart
+		cart has sign on it "This cart is very heavy! So heavy it's affected by gravity even though other objects aren't! If you're not careful, it could hurt somebody!"
+		
+	walk back to big ledge, rotate to find a couple of blocks
+		simple block puzzle, just arrange them all in both planes to make stairs up
+	
+	return back to starting area
+		make it obvious to go back here, so players don't just get lost!
+		maybe we can see the boss door in the distance from here?
+		
+
+Level 1 boss:
+	by rotating planes, can see the "wall" blocking right of the starting area is actually just a door with no walls around it - MC can just walk around its
+	Boss says something like "I have your weapon still, you can't hurt me!"?
+	
+	How to defeat:
+		~~should involve rotating planes, possibly activating/moving lasers on both planes to corner/kill the boss?~~
+		assemble the cart
+		place the ladder ramp from earlier on the platforming blocks (offset from boss door)
+		place cart on the ramp - it rolls down and hits the boss
+	
+	after boss fight, teleporting to space no longer makes sense if we want to use the environment/gravity to kill the last boss
+		build(/repair) bridge out of boss parts to next area?
+		
+		
+		
+BRAINSTORMING SECTION
+Level 1 puzzle brainstorm:
+	~~interact with environment (i.e. flip switches)~~
+	~~repair switches so that MC can flip them~~
+	assemble things out of schematics to repair game mechanics
+	move objects to reach platforms/ledges
+	~~repair 2D cart to carry something somewhere~~	
+	
+	
+2.5D puzzle brainstorm
+	use similar puzzle mechanics from 2D, but add in plane-rotation as a requirement to solve puzzles
+	can now see things hidden from 2D perspective (i.e. things hidden behind short wall sections that just looked like the background in 2D)
+	
+	
+IGNORE THE FOLLOWING - limiting game to one level now
+Level 2: 2.5 D
+	Most basic functionality is returned to the game
+	Sound evolves (added "dimension")
+	Things still broken:
+		gravity for objects/bosses
+		
+	Repaired this level:
+		gravity for bosses (and objects?)
+		slow fall for MC (i.e. an umbrella)?

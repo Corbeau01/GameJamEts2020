@@ -1,0 +1,5 @@
+1 : Glitch noloop
+(Fade in) 2 : Glitch loop
+//player fixes music
+(Fade in) 3 : noGlitch loop
+(Fade in) 4 : noGlitch noloop
