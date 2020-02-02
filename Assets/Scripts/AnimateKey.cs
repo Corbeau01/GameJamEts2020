@@ -21,6 +21,10 @@ public class AnimateKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.F3))
+        {
+            this.gameObject.SetActive(false);
+        }
         time += Time.deltaTime;
         if (time > TimeToSwitch)
         {
