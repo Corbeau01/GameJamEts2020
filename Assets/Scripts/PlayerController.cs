@@ -153,12 +153,12 @@ public class PlayerController : MonoBehaviour
            
             rb.velocity = new Vector3(0.0f, rb.velocity.y, 0.0f);
         }
-        playerAnim.SetBool("jump", false);
+        playerAnim.SetBool("Jump", false);
         if (Input.GetKeyDown("space"))
         {
             if (CanJump)
             {
-                playerAnim.SetBool("jump", true);
+                playerAnim.SetBool("Jump", true);
                 rb.AddForce(Vector3.up * JumpThrust);
                 CanJump = false;
             }
