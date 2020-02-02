@@ -12,7 +12,7 @@ public class bluePrints : MonoBehaviour
         Cart
     }
 
-    public  List<bluePrintsEnum> ownedBluePrints;
+    public List<bluePrintsEnum> ownedBluePrints;
 
     public void Awake()
     {
@@ -30,6 +30,11 @@ public class bluePrints : MonoBehaviour
     public bool checkIfBluePrintOwned(bluePrintsEnum bluePrint)
     {
         return ownedBluePrints.Contains(bluePrint);
+    }
+
+    public int getBpCount()
+    {
+        return ownedBluePrints.Count;
     }
 
 }
