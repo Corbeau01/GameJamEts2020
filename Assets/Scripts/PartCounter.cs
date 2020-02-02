@@ -55,6 +55,10 @@ public class PartCounter : MonoBehaviour
                 Camera.main.GetComponent<Wireframe>().Fixed = true;
                 GameObject.Destroy(GameObject.Find("backGround1"));
             }
+            if (myId == 4)//tesseract
+            {
+                FindObjectOfType<PlayerController>().RotateAxisUnlocked = true;
+            }
             Instantiate(FinalProductPrefab, new Vector3(this.transform.position.x,this.transform.position.y,13f), Quaternion.identity);
             ISConstructefd = true;
             for (int i = 1; i < this.transform.childCount; i++)//ANAKIN
