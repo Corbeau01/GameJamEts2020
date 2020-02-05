@@ -147,6 +147,10 @@ public class PlayerController : MonoBehaviour
                 transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
                 rb.AddForce(Vector3.left * thrust);
             }
+            else
+            {
+                rb.velocity = new Vector3(0.0f, rb.velocity.y, 0.0f);
+            }
         }
         else
         {

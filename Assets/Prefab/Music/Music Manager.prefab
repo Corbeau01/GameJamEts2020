@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4722620602627475742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4722620602627475743}
+  - component: {fileID: 4722620602627475728}
+  m_Layer: 0
+  m_Name: Music Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4722620602627475743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722620602627475742}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30.983143, y: 2.7466507, z: -5.747382}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4722620602627475728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722620602627475742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ce309d385a63342a7660edaa3f93aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainTheme: {fileID: 7897709256502525153, guid: 84d52221dc2b4334181ad23846da819e,
+    type: 3}
+  MainThemeFlute: {fileID: 4981146676538838451, guid: a4bbff87ca7236f49aa5cca78d5cb5f2,
+    type: 3}
+  MainTheme3: {fileID: 7543236510390984333, guid: f01de0cd494d0e842a53c54729a15ce1,
+    type: 3}
+  MainTheme3Flute: {fileID: 7365955573442953150, guid: 8f1bf0bd3d40caa4eb6d8875abe97a4f,
+    type: 3}
+  MainTheme2: {fileID: 6786059612429958722, guid: 3b7541a6c5ad5034db860868acd9e5bf,
+    type: 3}
+  MainMenu: {fileID: 3950737735601952540, guid: adbb65bd3cd0d6b45a8b812e906058d3,
+    type: 3}
+  MainMenuLoop: {fileID: 5377438445720578578, guid: 574802e4bbce78248b8353a38f4fdbc0,
+    type: 3}
+  MainMenuGlitchLoop: {fileID: 7099538996166573905, guid: 256123ace2560474e921238d7d982eba,
+    type: 3}
+  MainMenuGlitch: {fileID: 5265616594107719433, guid: f6df993caa105de44a0c8c9bfa93fa11,
+    type: 3}
+  SwitchTo25D: 0
+  FadeSpeed: 0.2
+  FadeFluteSpeed: 1
+  IsMoving: 0

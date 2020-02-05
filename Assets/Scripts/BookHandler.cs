@@ -48,7 +48,7 @@ public class BookHandler : MonoBehaviour
             return; }
             
         foreach(var book in startBooks) { //make books clickable.
-            book.GetComponent<BookButton>().action = Options.start;
+            book.GetComponent<BookButton>().action = Options.badstart;
         }
         success = true;
     }

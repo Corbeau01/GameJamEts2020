@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -844,7 +844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &413280843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -901,8 +901,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -95.299995}
+  m_SizeDelta: {x: 164.9, y: 224.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443909434
 MonoBehaviour:
@@ -924,11 +924,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 75
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -980,7 +980,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 124}
+  m_AnchoredPosition: {x: 0, y: 472.7}
   m_SizeDelta: {x: 229.3, y: 59.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533818154
@@ -1136,7 +1136,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1, y: 1e-45, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1169,7 +1169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &827237710
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1276,7 +1276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &949992537
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1997,6 +1997,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b2eb82501b405c4b83fd6c61449bb25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneNumber: 0
+  time: 0
 --- !u!1 &1246003350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,7 +2017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1246003351
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2385,8 +2387,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: -15.5}
-  m_SizeDelta: {x: 289.2, y: 86.6}
+  m_AnchoredPosition: {x: 0, y: -194.3}
+  m_SizeDelta: {x: 1542.2, y: 921.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1410686620
 MonoBehaviour:
@@ -2408,7 +2410,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2419,9 +2421,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'We are L''xception Cosmik.
-
-    Located in Gatineau, Ottawa and Montreal'
+  m_Text: "3D Modeling\r\n\r\n- Jan Pachla\r\n- Eric L. Duval\r\n- Alexandre Lessard\r\n-
+    Vallerie Villeneuve\r\n\r\nPROGRAMMERS\r\n\r\n- Luke Goralczyk\r\n- Lindsay Munro\r\n-
+    Alexandre Lessard\r\n- Simon Tardif\r\n- Felix Decarie-Neault\r\n- Alexandre
+    B\xE9langer\r\n\r\nLEVEL DESIGN\r\n\r\n- Luke Goralczyk\r\n- Olivier Joule\r\n-
+    Eric Duval\r\n- Val\xE9rie Villeneuve\r\n\r\n2D ARTISTS\r\n\r\n- Julie Fiala\r\n-
+    Val\xE9rie Villeneuve\r\n- \xC9ric Duval\r\n\r\nMUSIC\r\n\r\n- Jacintha Van Den
+    Bussche\r\n- Olivier David Laplante\n- Daniel Major\r\n\r\nSound FX\r\n\r\n-
+    Olivier David Laplante\n- Simon Tardif"
 --- !u!222 &1410686621
 CanvasRenderer:
   m_ObjectHideFlags: 0

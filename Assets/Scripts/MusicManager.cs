@@ -29,6 +29,8 @@ public class MusicManager : MonoBehaviour
     }
     void Update()
     {
+
+        print(MainTheme.time);
         // changer de 2d a 2.5d
         if (SwitchTo25D)
         {

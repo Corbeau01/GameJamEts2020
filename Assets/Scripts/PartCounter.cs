@@ -12,6 +12,8 @@ public class PartCounter : MonoBehaviour
     public bluePrints bp;
     int maxPart=0;
     bool ISConstructefd = false;
+
+    public MusicManager musicManager;
     
     void Start()
     {
@@ -58,6 +60,7 @@ public class PartCounter : MonoBehaviour
             if (myId == 4)//tesseract
             {
                 FindObjectOfType<PlayerController>().RotateAxisUnlocked = true;
+                musicManager.SwitchTo25D = true;
             }
             Instantiate(FinalProductPrefab, new Vector3(this.transform.position.x,this.transform.position.y,13f), Quaternion.identity);
             ISConstructefd = true;
